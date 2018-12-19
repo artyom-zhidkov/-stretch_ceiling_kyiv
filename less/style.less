@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700');
+
+@font-weight_300 : 300;
+@font-weight_400 : 400;
+@font-weight_bold : 700;
+@font-size_xs : 12px;
+@font-size_small : 14px;
+@font-size_medium : 16px;
+@font-size_large : 22px;
+@font-size_xlarge : 34px;
+@font-size_xxlarge : 64px;
+@font-size_xxxlarge : 90px;
+@width-item-block-porfolio : 180px;
+@width-item-block-advantages : 300px;
+@width-item-block-team : 250px;
+@basic-color-font : rgb(70, 70, 70);
+@custom_blue : rgb(0, 91, 126);
+@custom_blue_ligth : rgb(0, 172, 193);
+@custom_red : rgb(229, 56, 53);
+@background-color_grey : rgb(222, 224, 224);
+@background-color_grey_ligth : rgb(245, 245, 245);
+
+.font-weight_300 {
+    font-weight: @font-weight_300;
+}
+
+.font-weight_400 {
+    font-weight: @font-weight_400;
+}
+
+.font-weight_bold {
+    font-weight: @font-weight_bold;
+}
+
+.font-size_xs {
+    font-size: @font-size_xs;
+}
+.font-size_small {
+    font-size: @font-size_small;
+}
+
+.font-size_medium {
+    font-size: @font-size_medium;
+}
+
+.font-size_large {
+    font-size: @font-size_large;
+}
+
+.font-size_xlarge {
+    font-size: @font-size_xlarge;
+}
+
+.font-size_xxlarge {
+    font-size: @font-size_xxlarge;
+}
+
+.font-size_xxxlarge {
+    font-size: @font-size_xxxlarge;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    color: @basic-color-font;
+    line-height: 1;
+}
+
+.flex {
+    display: flex;
+
+    &.justify-content_space-between {
+        justify-content: space-between;
+        
+        @media (max-width: 800px) {
+            justify-content: center;
+        }
+    }
+    
+    &.justify-content_center {
+        justify-content: center;
+    }
+
+    &.justify-content_space-evenly {
+        justify-content: space-evenly;
+    }
+   
+    &.align-items_center {
+        align-items: center;
+    }
+
+    &.flex-wrap_wrap{
+        flex-wrap: wrap;
+    }
+}
+
+.line-heigth_medium {
+    line-height: 1.5;
+}
+
+.text-align_left {
+    text-align: left;
+    @media (max-width: 600px) {
+        text-align: center;
+    }
+}
+
+.text-align_center {
+    text-align: center;
+}
+
+.text-align_right {
+    text-align: right;
+    @media (max-width: 800px) {
+        text-align: center;
+    }
+}
+
+.padding_5px {
+    padding: 5px;
+}
+
+.padding_15px {
+    padding: 15px;
+}
+
+.padding-botttom_15px {
+    padding-bottom: 15px;
+}
+
+.padding-botttom_30px {
+    padding-bottom: 30px;
+}
+
+.padding-top_70px {
+    padding-top: 70px;
+}
+
+.padding-top_50px {
+    padding-top: 50px;
+}
+
+.padding-top_30px {
+    padding-top: 30px;
+}
+
+.padding-top_15px {
+    padding-top: 15px;
+}
+
+.rectangle_grey {
+    background-image: url(../image/rectangle1.png);
+    height: 160px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+}
+
+.custom_blue {
+    color: @custom_blue;
+}
+
+.text-color_custom-red {
+    color: @custom_red;
+}
+
+.background-color_grey{
+    background: @background-color_grey;
+}
+
+.background-color_grey_ligth{
+    background: @background-color_grey_ligth;
+}
+
+.display_block {
+    display: block;
+}
+
+.block-gallery {
+    .text-align_center();
+    .font-size_medium();
+    .padding-top_50px();
+    .font-weight_300();
+    .line-heigth_medium();
+    .flex();
+    .justify-content_space-evenly();
+    .flex-wrap_wrap();
+    
+    .block-gallery__item {
+        .padding_5px();
+        .font-size_small();
+        &.block-gallery__item_for_porfolio {
+            width: @width-item-block-porfolio + 10px;
+            .padding_5px();
+            .padding-botttom_15px();
+            img {
+                width: @width-item-block-porfolio;
+            }
+        }
+        &.block-gallery__item_for_advantages {
+            width: @width-item-block-advantages;
+            .padding_15px();
+            img {
+                width: @width-item-block-advantages - 30px;
+            }
+        }
+        &.block-gallery__item_for_team {
+            width: @width-item-block-team;
+            .padding_15px();
+            img {
+                width: @width-item-block-team - 30px;
+            }
+        }
+    }
+    
+    .block-gallery__description{
+        .padding-top_15px();
+        .font-weight_bold();
+        .font-size_small();
+    }
+    
+    .block-gallery__description2{
+        .padding_5px();
+        .font-size_xs();
+    }
+}
+
+.mark_red {
+    .text-color_custom-red();
+    .font-weight_400();
+}
+
+section {
+    
+    &.section_padding {
+        padding: 12px 10% 50px;
+    }
+    &.section_padding_small {
+        padding: 5px 10%;
+    }
+    &.section_background-image {
+        background-image: url(../image/001_background.jpg);
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        background-attachment:fixed;
+    
+    &.background-image_red {
+        background-image: url(../image/001_background_red.jpg);
+        }
+    &.background-image_blue {
+        background-image: url(../image/001_background_blue.jpg);
+        }
+    }
+}
+
+.header__telephone_rigth {
+    .display_block();
+    .font-weight_bold();
+    .font-size_medium();
+    .padding_5px();
+    @media (max-width: 800px) {
+        .padding_15px();
+    }
+}
+
+.section__header {
+    .text-align_center();
+    .line-heigth_medium();
+    
+    .section__header_h1 {
+        .padding-top_50px();
+        .font-weight_bold();
+        .font-size_xlarge();
+     }
+    
+    .section__header_h2 {
+        .padding-top_15px();
+        .font-weight_300();
+        .font-size_large();
+     }
+    
+    .section_header_telephone {
+        .display_block();
+        .font-size_large();
+        .font-weight_bold();
+        .padding-top_30px();
+    }
+    
+    &.section__header_text_white {
+        color: white;
+    }
+}
+
+iframe{
+    @media (max-width: 720px) {
+        width: 100%;
+        height: 250px;
+    }
+    @media (max-width: 570px) {
+        width: 100%;
+        height: 180px;
+    }
+}
+
+.section__button {
+    text-align: center;
+    padding: 11px;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    
+    &.section__button_red {
+        display: block;
+        margin: 30px auto;
+        background: rgb(240, 37, 34);
+        border: solid 2px rgb(204, 18, 14);
+        
+        &.section__button_red__margin_center {
+            margin: 0 auto;
+        }
+    }
+    
+    &.section__button_blue {
+        background: @custom_blue_ligth;
+        border-style: none;
+        margin: 20px 10px;
+    }
+}
+
+.section__input {
+    padding: 11px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    border: solid 2px grey;
+    border-style: none;
+}
+
+
